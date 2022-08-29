@@ -1,0 +1,14 @@
+[user]
+	email = ltbinh3999@gmail.com
+	name = Binh Le
+
+[core]
+	sshCommand = "ssh -i /home/binh/.ssh/personal"
+
+[includeIf "gitdir:~/saleshood/"]
+    path = ~/.config/git/config-saleshood
+
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master

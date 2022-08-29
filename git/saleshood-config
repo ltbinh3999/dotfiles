@@ -1,0 +1,5 @@
+[user]
+	email = binh.le@saleshood.com
+[core]
+	sshCommand = "ssh -i /home/binh/.ssh/saleshood"
+	hooksPath = "/home/binh/.config/git/hooks"
