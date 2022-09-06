@@ -3,9 +3,9 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:				"Noto Sans Regular 10";
+    font:				"Fira Code 16";
     show-icons:				true;
-    icon-theme:				"Qogir";
+    icon-theme:				"Papirus";
     display-drun:			"Apps";
     drun-display-format:		"{name}";
     scroll-method:			0;
@@ -19,10 +19,11 @@ window {
     background-color: @background;
     border:           0;
     padding:          30;
+    width: 25%;
 }
 listview {
-    lines:                          10;
-    columns:                        3;
+    lines:                          20;
+    columns:                        1;
 }
 mainbox {
     border:  0;

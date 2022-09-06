@@ -13,12 +13,17 @@ end)
 require("nvim-tree").setup({
   open_on_setup = true,
   open_on_setup_file = true,
+  open_on_tab = true,
   view = {
     number = true,
     mappings = {
       list = {
-        {key = "<CR>", action = "tabnew"}
       }
+    }
+  },
+  renderer = {
+    indent_markers = {
+      enable = true
     }
   }
 })
@@ -37,6 +42,7 @@ map("n", "<F1>", "<C-W><C-W>", { silent = true })
 -- Settings
 vim.g.tokyonight_style = "night"
 vim.cmd[[colorscheme tokyonight]]
+vim.opt.guifont={'FiraCode Nerd Font Mono','h16'}
 vim.opt.termguicolors = true-- Enable gui colors
 vim.opt.encoding     = 'utf-8'  -- Display this encoding
 vim.opt.fileencoding = 'utf-8'  -- Use this encoding when writing to file

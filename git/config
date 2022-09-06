@@ -5,10 +5,10 @@
 [core]
 	sshCommand = "ssh -i /home/binh/.ssh/personal"
 
-[includeIf "gitdir:~/saleshood/"]
-    path = ~/.config/git/config-saleshood
-
 [pull]
 	rebase = false
 [init]
 	defaultBranch = master
+
+[includeIf "gitdir:~/saleshood/"]
+    path = ~/saleshood/gitconfig

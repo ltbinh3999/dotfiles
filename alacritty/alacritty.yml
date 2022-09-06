@@ -3,10 +3,8 @@ env:
   WINIT_X11_SCALE_FACTOR: '1'
 
 font:
-  normal:
-    family: Fira Code 
-    style: Regular
-  size: 14
+  family: 'FiraCode Nerd Font Mono'
+  size: 16
 
 shell:
   program: /usr/bin/fish
