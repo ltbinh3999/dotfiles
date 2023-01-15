@@ -11,4 +11,4 @@
 	defaultBranch = master
 
 [includeIf "gitdir:~/saleshood/"]
-    path = ~/saleshood/gitconfig
+    path = ~/.config/git/saleshood-config

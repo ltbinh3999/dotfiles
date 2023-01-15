@@ -3,13 +3,13 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id fcitx
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id stretchly
-exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 144.00
+exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 144.00
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 ########## System Settings ##########
-font pango: Source Code Pro
+font pango: Fira Code 
 workspace_layout default
 default_border none
 floating_modifier $mod
@@ -19,7 +19,7 @@ bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)" 
 bindsym $mod+F2 exec --no-startup-id google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode -profile-directory="Default"
 bindsym $mod+F3 exec --no-startup-id google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode -profile-directory="Profile 1"
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 bindsym $mod+t exec --no-startup-id rofi -show window -config ~/.config/rofi/rofidmenu.rasi
 
@@ -78,7 +78,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+g layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+
 bindsym $mod+a focus parent
 bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
 
