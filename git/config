@@ -4,6 +4,7 @@
 
 [core]
 	sshCommand = "ssh -i /home/binh/.ssh/personal"
+	editor = "code -w"
 
 [pull]
 	rebase = false
