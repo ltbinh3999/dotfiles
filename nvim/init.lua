@@ -22,7 +22,23 @@ function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<F1>", "<C-W><C-W>", { silent = true })
-
+require("nvim-tree").setup({
+  open_on_setup = true,
+  open_on_setup_file = true,
+  open_on_tab = true,
+  view = {
+    number = true,
+    mappings = {
+      list = {
+      }
+    }
+  },
+  renderer = {
+    indent_markers = {
+      enable = true
+    }
+  }
+})
 -- Settings
 vim.opt.guifont={'FiraCode Nerd Font Mono','h16'}
 vim.opt.termguicolors = true-- Enable gui colors
