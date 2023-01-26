@@ -3,6 +3,7 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-fugitive'
     use 'folke/tokyonight.nvim'
+
     use {
       'kyazdani42/nvim-tree.lua',
       requires = {
@@ -26,12 +27,18 @@ require("nvim-tree").setup({
   open_on_setup = true,
   open_on_setup_file = true,
   open_on_tab = true,
+  respect_buf_cwd = true,
+  sync_root_with_cwd = true,
   view = {
     number = true,
     mappings = {
       list = {
       }
     }
+  },
+  update_focused_file = {
+    enable = true,
+    update_root = true
   },
   renderer = {
     indent_markers = {
@@ -40,7 +47,6 @@ require("nvim-tree").setup({
   }
 })
 -- Settings
-vim.opt.guifont={'FiraCode Nerd Font Mono','h16'}
 vim.opt.termguicolors = true-- Enable gui colors
 vim.opt.encoding     = 'utf-8'  -- Display this encoding
 vim.opt.fileencoding = 'utf-8'  -- Use this encoding when writing to file
@@ -59,4 +65,5 @@ vim.opt.smartindent = true    -- Make indenting smart
 vim.opt.autoindent  = true    -- Use auto indent
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.colorcolumn = '80'
+vim.cmd[[colorscheme tokyonight-night]]
 

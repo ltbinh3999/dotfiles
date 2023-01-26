@@ -19,7 +19,7 @@ bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)" 
 bindsym $mod+F2 exec --no-startup-id google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode -profile-directory="Default"
 bindsym $mod+F3 exec --no-startup-id google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode -profile-directory="Profile 1"
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 bindsym $mod+t exec --no-startup-id rofi -show window -config ~/.config/rofi/rofidmenu.rasi
 
