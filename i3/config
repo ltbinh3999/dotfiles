@@ -1,5 +1,6 @@
 ########## Startup Services ##########
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id xset -dpms
 exec --no-startup-id fcitx
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id stretchly
@@ -9,7 +10,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 ########## System Settings ##########
-font pango: Fira Code 
+font pango: Fira Code Regular Nerd Font Complete Mono 
 workspace_layout default
 default_border none
 floating_modifier $mod
@@ -67,10 +68,21 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
