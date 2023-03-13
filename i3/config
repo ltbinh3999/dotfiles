@@ -1,6 +1,6 @@
 ########## Startup Services ##########
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id xset -dpms
+exec --no-startup-id xset s off -dpms
 exec --no-startup-id fcitx
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id stretchly
@@ -8,13 +8,14 @@ exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 144.00
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
-
+exec_always --no-startup-id picom --config  ~/.config/picom.conf
 ########## System Settings ##########
 font pango: Fira Code Regular Nerd Font Complete Mono 
 workspace_layout default
 default_border none
 floating_modifier $mod
-
+gaps top 60px
+gaps inner 20px
 ########## App Shortcuts ##########
 bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)" 
